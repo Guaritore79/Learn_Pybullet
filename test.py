@@ -34,25 +34,25 @@ class MyController(Controller):
     def __init__(self, **kwargs):
         Controller.__init__(self, **kwargs)
 
-    # def on_triangle_press(self):
-    #     p.setJointMotorControl2(
-    #         bodyUniqueId=boxId,
-    #         jointIndex=13,
-    #         controlMode=p.POSITION_CONTROL,
-    #         targetPosition = 1.57,
-    #         force = 100,
-    #         maxVelocity = 5
-    #     )
+    def on_triangle_press(self):
+        p.setJointMotorControl2(
+            bodyUniqueId=boxId,
+            jointIndex=13,
+            controlMode=p.POSITION_CONTROL,
+            targetPosition = -0.38,
+            force = 500,
+            maxVelocity = 5
+        )
     
-    # def on_triangle_release(self):
-    #     p.setJointMotorControl2(
-    #         bodyUniqueId=boxId,
-    #         jointIndex=13,
-    #         controlMode=p.POSITION_CONTROL,
-    #         targetPosition = 0,
-    #         force = 100,
-    #         maxVelocity = 5
-    #     )
+    def on_triangle_release(self):
+        p.setJointMotorControl2(
+            bodyUniqueId=boxId,
+            jointIndex=13,
+            controlMode=p.POSITION_CONTROL,
+            targetPosition = 0,
+            force = 500,
+            maxVelocity = 5
+        )
 
     def on_up_arrow_press(self):
         p.setJointMotorControlArray(
@@ -126,32 +126,6 @@ thread_controller.start()
 info_kepala = p.getJointInfo(boxId, 13)
 batas_bawah = info_kepala[8]
 batas_atas = info_kepala[9]
-
-p.setJointMotorControl2(
-    bodyUniqueId=boxId,
-    jointIndex=13,
-    controlMode=p.POSITION_CONTROL,
-    targetPosition = -0.38,
-    force = 500,
-    maxVelocity = 5
-)
-
-for i in range (480):
-    p.stepSimulation()
-    time.sleep(1/240.)
-
-p.setJointMotorControl2(
-    bodyUniqueId=boxId,
-    jointIndex=13,
-    controlMode=p.POSITION_CONTROL,
-    targetPosition = 0,
-    force = 500,
-    maxVelocity = 5
-)
-
-for i in range (240):
-    p.stepSimulation()
-    time.sleep(1/240.)
 
 
 print("Intro selesai, masuk ke kendali PS4!")
