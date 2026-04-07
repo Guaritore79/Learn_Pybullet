@@ -127,6 +127,8 @@ info_kepala = p.getJointInfo(boxId, 13)
 batas_bawah = info_kepala[8]
 batas_atas = info_kepala[9]
 
+print(f"Batas atas {batas_atas}, Batas bawah {batas_bawah}")
+
 
 print("Intro selesai, masuk ke kendali PS4!")
 
