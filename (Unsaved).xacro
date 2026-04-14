@@ -2,6 +2,7 @@
 <robot name="(Unsaved)" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
 <xacro:include filename="materials.xacro" />
+
 <link name="base_link">
   <inertial>
     <origin xyz="-0.19747326793103112 0.0011545818939354344 0.001999156859975229" rpy="0 0 0"/>
@@ -25,19 +26,19 @@
 
 <link name="teta1_1">
   <inertial>
-    <origin xyz="0.030534126789324406 -0.015667414362937795 -0.00029693086440870514" rpy="0 0 0"/>
+    <origin xyz="0.007457738610655351 -0.033495925310553426 0.0005597644070481703" rpy="0 0 0"/>
     <mass value="0.322485513471676"/>
-    <inertia ixx="7.5e-05" iyy="7.3e-05" izz="9.9e-05" ixy="2e-06" iyz="-0.0" ixz="0.0"/>
+    <inertia ixx="7.4e-05" iyy="7.3e-05" izz="9.9e-05" ixy="3e-06" iyz="1e-06" ixz="-1e-06"/>
   </inertial>
   <visual>
-    <origin xyz="0.144694 0.105026 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.114018 0.08132 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.144694 0.105026 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.114018 0.08132 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -46,40 +47,61 @@
 
 <link name="tibia1_1">
   <inertial>
-    <origin xyz="0.013631914546237855 0.009229301543740576 -0.01387288396315086" rpy="0 0 0"/>
-    <mass value="0.5005531081408956"/>
-    <inertia ixx="0.000169" iyy="0.000166" izz="0.000101" ixy="4e-06" iyz="0.0" ixz="0.0"/>
+    <origin xyz="0.01300075031251191 0.01014451022429283 -0.01383993691310137" rpy="0 0 0"/>
+    <mass value="0.5005531081408972"/>
+    <inertia ixx="0.000168" iyy="0.000167" izz="0.000102" ixy="5e-06" iyz="-3e-06" ixz="3e-06"/>
   </inertial>
   <visual>
-    <origin xyz="0.111055 0.154709 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.099235 0.14816 0.049792" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.111055 0.154709 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.099235 0.14816 0.049792" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="teta2_1">
+<link name="coxa1_1">
   <inertial>
-    <origin xyz="0.030092369962315096 0.016499999999999838 -0.00029693086440886474" rpy="0 0 0"/>
-    <mass value="0.322485513471676"/>
-    <inertia ixx="7.1e-05" iyy="7.6e-05" izz="9.9e-05" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+    <origin xyz="0.012623331280600614 -0.014399972809350028 -0.03845464138452408" rpy="0 0 0"/>
+    <mass value="1.0829342534788695"/>
+    <inertia ixx="0.000688" iyy="0.00065" izz="0.000489" ixy="0.000143" iyz="-7.9e-05" ixz="6.9e-05"/>
   </inertial>
   <visual>
-    <origin xyz="0.105851 0.0165 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.1571 0.05727 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="coxa1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1571 0.05727 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="coxa1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="teta2_1">
+  <inertial>
+    <origin xyz="0.03080650855798238 -0.01509942070888103 0.0009294869219693275" rpy="0 0 0"/>
+    <mass value="0.322485513471676"/>
+    <inertia ixx="7.1e-05" iyy="7.6e-05" izz="9.9e-05" ixy="-0.0" iyz="-0.0" ixz="-1e-06"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.106659 -0.01862 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.105851 0.0165 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.106659 -0.01862 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -88,40 +110,61 @@
 
 <link name="tibia2_1">
   <inertial>
-    <origin xyz="2.0452293353345752e-07 0.01646291267745646 -0.013872883963150555" rpy="0 0 0"/>
-    <mass value="0.5005531081408956"/>
-    <inertia ixx="0.000163" iyy="0.000172" izz="0.000101" ixy="0.0" iyz="0.0" ixz="-0.0"/>
+    <origin xyz="-0.0011772196856956324 0.01642612539978206 -0.013866134636234297" rpy="0 0 0"/>
+    <mass value="0.5005531081408972"/>
+    <inertia ixx="0.000163" iyy="0.000172" izz="0.000101" ixy="-0.0" iyz="0.0" ixz="-2e-06"/>
   </inertial>
   <visual>
-    <origin xyz="0.045851 0.0165 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.045218 0.011587 0.050239" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.045851 0.0165 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.045218 0.011587 0.050239" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
-<link name="teta3_1">
+<link name="coxa2_1">
   <inertial>
-    <origin xyz="0.0049988335991379 0.03378988634228103 0.0002969308644092117" rpy="0 0 0"/>
-    <mass value="0.322485513471676"/>
-    <inertia ixx="7.4e-05" iyy="7.3e-05" izz="9.9e-05" ixy="-2e-06" iyz="0.0" ixz="0.0"/>
+    <origin xyz="0.019130272556860894 0.0008632369545831863 -0.03845464138452424" rpy="0 0 0"/>
+    <mass value="1.0829342534788695"/>
+    <inertia ixx="0.000525" iyy="0.000813" izz="0.000489" ixy="-1.3e-05" iyz="5e-06" ixz="0.000105"/>
   </inertial>
   <visual>
-    <origin xyz="0.115797 -0.084261 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.152351 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="coxa2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.152351 -0.0 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="coxa2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="teta3_1">
+  <inertial>
+    <origin xyz="0.03205389994058132 0.011802607043990956 -0.0002969308644088231" rpy="0 0 0"/>
+    <mass value="0.322485513471676"/>
+    <inertia ixx="7.4e-05" iyy="7.3e-05" izz="9.9e-05" ixy="-3e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.139127 -0.103221 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.115797 -0.084261 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.139127 -0.103221 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -130,40 +173,61 @@
 
 <link name="tibia3_1">
   <inertial>
-    <origin xyz="-0.01309616122417527 0.009975931443530317 -0.013872883963150652" rpy="0 0 0"/>
-    <mass value="0.5005531081408956"/>
-    <inertia ixx="0.000169" iyy="0.000166" izz="0.000101" ixy="-4e-06" iyz="0.0" ixz="-0.0"/>
+    <origin xyz="-0.012443498606944797 0.010778592092196643 -0.013872883963235084" rpy="0 0 0"/>
+    <mass value="0.5005531081408972"/>
+    <inertia ixx="0.000168" iyy="0.000167" izz="0.000101" ixy="-4e-06" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.079437 -0.13199 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.074899 -0.126966 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.079437 -0.13199 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.074899 -0.126966 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
+<link name="coxa3_1">
+  <inertial>
+    <origin xyz="0.012550506304740416 0.01446349281278922 -0.038454641384523994" rpy="0 0 0"/>
+    <mass value="1.0829342534788695"/>
+    <inertia ixx="0.000689" iyy="0.000649" izz="0.000489" ixy="-0.000143" iyz="7.9e-05" ixz="6.9e-05"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.1571 -0.05727 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="coxa3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.1571 -0.05727 -0.0" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="coxa3_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
 <link name="teta4_1">
   <inertial>
-    <origin xyz="-0.031894846797939025 0.012668757983660323 -0.00029693086440856636" rpy="0 0 0"/>
+    <origin xyz="-0.007231179844230107 0.033548934178161266 -0.0002969308644086843" rpy="0 0 0"/>
     <mass value="0.322485513471676"/>
     <inertia ixx="7.4e-05" iyy="7.3e-05" izz="9.9e-05" ixy="3e-06" iyz="0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.254528 -0.103617 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.280518 -0.081614 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.254528 -0.103617 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.280518 -0.081614 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="teta4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
@@ -172,177 +236,30 @@
 
 <link name="tibia4_1">
   <inertial>
-    <origin xyz="-0.01268524175515362 -0.010494219075531164 -0.013872883963149903" rpy="0 0 0"/>
-    <mass value="0.5005531081408956"/>
+    <origin xyz="-0.012444027191681306 -0.010778842746671374 -0.013872883963234932" rpy="0 0 0"/>
+    <mass value="0.5005531081408972"/>
     <inertia ixx="0.000168" iyy="0.000167" izz="0.000101" ixy="4e-06" iyz="-0.0" ixz="-0.0"/>
   </inertial>
   <visual>
-    <origin xyz="0.292773 -0.149848 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.294859 -0.148572 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
-    <origin xyz="0.292773 -0.149848 0.0515" rpy="0 0 0"/>
+    <origin xyz="0.294859 -0.148572 0.0515" rpy="0 0 0"/>
     <geometry>
       <mesh filename="tibia4_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="teta5_1">
-  <inertial>
-    <origin xyz="-0.03009196091642463 -0.016500000000000042 -0.00029693086440888555" rpy="0 0 0"/>
-    <mass value="0.322485513471676"/>
-    <inertia ixx="7.1e-05" iyy="7.6e-05" izz="9.9e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.288851 -0.0165 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="teta5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.288851 -0.0165 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="teta5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="tibia5_1">
-  <inertial>
-    <origin xyz="2.0452295651507413e-07 -0.01646291267745669 -0.013872883963150527" rpy="0 0 0"/>
-    <mass value="0.5005531081408956"/>
-    <inertia ixx="0.000163" iyy="0.000172" izz="0.000101" ixy="0.0" iyz="-0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.348851 -0.0165 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="tibia5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.348851 -0.0165 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="tibia5_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="teta6_1">
-  <inertial>
-    <origin xyz="-0.004160848120962735 -0.034065716062035664 -0.00029693086440885086" rpy="0 0 0"/>
-    <mass value="0.322485513471676"/>
-    <inertia ixx="7.5e-05" iyy="7.3e-05" izz="9.9e-05" ixy="-2e-06" iyz="-0.0" ixz="-0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.278135 0.085404 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="teta6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.278135 0.085404 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="teta6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="tibia6_1">
-  <inertial>
-    <origin xyz="0.013369579866801706 -0.009606733852596305 -0.013872883963150888" rpy="0 0 0"/>
-    <mass value="0.5005531081408956"/>
-    <inertia ixx="0.000169" iyy="0.000166" izz="0.000101" ixy="-4e-06" iyz="-0.0" ixz="0.0"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.313148 0.134129 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="tibia6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.313148 0.134129 0.0515" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="tibia6_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="coxa1_1">
-  <inertial>
-    <origin xyz="0.010721348766451672 -0.015867054756867255 -0.03845464138452091" rpy="0 0 0"/>
-    <mass value="1.0829342534788744"/>
-    <inertia ixx="0.000723" iyy="0.000615" izz="0.000489" ixy="0.000134" iyz="-8.7e-05" ixz="5.9e-05"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.1571 0.05727 -0.0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="coxa1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.1571 0.05727 -0.0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="coxa1_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="coxa2_1">
-  <inertial>
-    <origin xyz="0.019149731596684927 -1.7142476112559367e-05 -0.03845464138452086" rpy="0 0 0"/>
-    <mass value="1.0829342534788744"/>
-    <inertia ixx="0.000525" iyy="0.000813" izz="0.000489" ixy="1e-06" iyz="-0.0" ixz="0.000105"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.152351 -0.0 -0.0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="coxa2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.152351 -0.0 -0.0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="coxa2_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-  </collision>
-</link>
-
-<link name="coxa3_1">
-  <inertial>
-    <origin xyz="0.0116175998283789 0.01522303303614854 -0.03845464138452081" rpy="0 0 0"/>
-    <mass value="1.0829342534788744"/>
-    <inertia ixx="0.000707" iyy="0.000631" izz="0.000489" ixy="-0.000139" iyz="8.4e-05" ixz="6.4e-05"/>
-  </inertial>
-  <visual>
-    <origin xyz="0.1571 -0.05727 -0.0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="coxa3_1.stl" scale="0.001 0.001 0.001"/>
-    </geometry>
-    <material name="silver"/>
-  </visual>
-  <collision>
-    <origin xyz="0.1571 -0.05727 -0.0" rpy="0 0 0"/>
-    <geometry>
-      <mesh filename="coxa3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="coxa4_1">
   <inertial>
-    <origin xyz="-0.012193322564369419 0.014766371448479601 -0.038454641384520705" rpy="0 0 0"/>
-    <mass value="1.0829342534788744"/>
-    <inertia ixx="0.000697" iyy="0.000641" izz="0.000489" ixy="0.000142" iyz="8.1e-05" ixz="-6.7e-05"/>
+    <origin xyz="-0.012525182858772466 0.014485940570305444 -0.03845464138452389" rpy="0 0 0"/>
+    <mass value="1.0829342534788695"/>
+    <inertia ixx="0.00069" iyy="0.000648" izz="0.000489" ixy="0.000143" iyz="8e-05" ixz="-6.9e-05"/>
   </inertial>
   <visual>
     <origin xyz="0.237601 -0.05727 -0.0" rpy="0 0 0"/>
@@ -355,15 +272,57 @@
     <origin xyz="0.237601 -0.05727 -0.0" rpy="0 0 0"/>
     <geometry>
       <mesh filename="coxa4_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="teta5_1">
+  <inertial>
+    <origin xyz="-0.03014949429074193 0.016394643449314152 -0.0002969308644087121" rpy="0 0 0"/>
+    <mass value="0.322485513471676"/>
+    <inertia ixx="7.1e-05" iyy="7.6e-05" izz="9.9e-05" ixy="-0.0" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.288793 0.016662 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="teta5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.288793 0.016662 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="teta5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tibia6_1">
+  <inertial>
+    <origin xyz="5.772391614522476e-05 -0.016462667283913355 -0.013872883963234946" rpy="0 0 0"/>
+    <mass value="0.5005531081408972"/>
+    <inertia ixx="0.000163" iyy="0.000172" izz="0.000101" ixy="-0.0" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.348908 -0.016128 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="tibia6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.348908 -0.016128 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="tibia6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
 
 <link name="coxa5_1">
   <inertial>
-    <origin xyz="-0.019149322550794573 1.7142476112579354e-05 -0.03845464138452092" rpy="0 0 0"/>
-    <mass value="1.0829342534788744"/>
-    <inertia ixx="0.000525" iyy="0.000813" izz="0.000489" ixy="1e-06" iyz="0.0" ixz="-0.000105"/>
+    <origin xyz="-0.01914926572398204 -4.970195210862727e-05 -0.038454641384523945" rpy="0 0 0"/>
+    <mass value="1.0829342534788695"/>
+    <inertia ixx="0.000525" iyy="0.000813" izz="0.000489" ixy="-0.0" iyz="-0.0" ixz="-0.000105"/>
   </inertial>
   <visual>
     <origin xyz="0.242351 -0.0 -0.0" rpy="0 0 0"/>
@@ -380,11 +339,53 @@
   </collision>
 </link>
 
+<link name="teta6_1">
+  <inertial>
+    <origin xyz="-0.03217417984423032 -0.011941934178161306 -0.0002969308644086427" rpy="0 0 0"/>
+    <mass value="0.322485513471676"/>
+    <inertia ixx="7.4e-05" iyy="7.3e-05" izz="9.9e-05" ixy="-3e-06" iyz="-0.0" ixz="-0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.255575 0.103221 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="teta6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.255575 0.103221 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="teta6_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="tibia5_1">
+  <inertial>
+    <origin xyz="0.012443907652835318 -0.010778592092196587 -0.013872883963234918" rpy="0 0 0"/>
+    <mass value="0.5005531081408972"/>
+    <inertia ixx="0.000168" iyy="0.000167" izz="0.000101" ixy="-4e-06" iyz="-0.0" ixz="0.0"/>
+  </inertial>
+  <visual>
+    <origin xyz="0.319803 0.126966 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="tibia5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="silver"/>
+  </visual>
+  <collision>
+    <origin xyz="0.319803 0.126966 0.0515" rpy="0 0 0"/>
+    <geometry>
+      <mesh filename="tibia5_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
 <link name="coxa6_1">
   <inertial>
-    <origin xyz="-0.011188622468052495 -0.015541492362827966 -0.038454641384520864" rpy="0 0 0"/>
-    <mass value="1.0829342534788744"/>
-    <inertia ixx="0.000715" iyy="0.000623" izz="0.000489" ixy="-0.000137" iyz="-8.5e-05" ixz="-6.2e-05"/>
+    <origin xyz="-0.012551097258850008 -0.014463492812789358 -0.03845464138452392" rpy="0 0 0"/>
+    <mass value="1.0829342534788695"/>
+    <inertia ixx="0.000689" iyy="0.000649" izz="0.000489" ixy="-0.000143" iyz="-7.9e-05" ixz="-6.9e-05"/>
   </inertial>
   <visual>
     <origin xyz="0.237601 0.05727 -0.0" rpy="0 0 0"/>
@@ -402,146 +403,147 @@
 </link>
 
 <joint name="Revolute 1" type="revolute">
-  <origin xyz="0.012406 -0.047756 -0.0515" rpy="0 0 0"/>
+  <origin xyz="0.043082 -0.02405 -0.0515" rpy="0 0 0"/>
   <parent link="coxa1_1"/>
   <child link="teta1_1"/>
-  <axis xyz="0.82806 0.560639 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <axis xyz="0.75136 0.659893 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
 <joint name="Revolute 2" type="revolute">
-  <origin xyz="0.033639 -0.049683 0.0" rpy="0 0 0"/>
+  <origin xyz="0.014783 -0.06684 0.001708" rpy="0 0 0"/>
   <parent link="teta1_1"/>
   <child link="tibia1_1"/>
-  <axis xyz="0.82806 0.560639 -0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <axis xyz="0.75136 0.659893 -0.0"/>
+  <limit upper="1.612352" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 5" type="revolute">
-  <origin xyz="0.0465 -0.0165 -0.0515" rpy="0 0 0"/>
-  <parent link="coxa2_1"/>
-  <child link="teta2_1"/>
-  <axis xyz="0.0 -1.0 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 6" type="revolute">
-  <origin xyz="0.06 0.0 0.0" rpy="0 0 0"/>
-  <parent link="teta2_1"/>
-  <child link="tibia2_1"/>
-  <axis xyz="-0.0 1.0 -0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 7" type="revolute">
-  <origin xyz="0.041303 0.026991 -0.0515" rpy="0 0 0"/>
-  <parent link="coxa3_1"/>
-  <child link="teta3_1"/>
-  <axis xyz="0.795473 -0.605988 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 8" type="revolute">
-  <origin xyz="0.03636 0.047729 0.0" rpy="0 0 0"/>
-  <parent link="teta3_1"/>
-  <child link="tibia3_1"/>
-  <axis xyz="-0.795473 0.605988 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 9" type="revolute">
-  <origin xyz="-0.016927 0.046347 -0.0515" rpy="0 0 0"/>
-  <parent link="coxa4_1"/>
-  <child link="teta4_1"/>
-  <axis xyz="0.770513 0.637424 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 10" type="revolute">
-  <origin xyz="-0.038245 0.046231 0.0" rpy="0 0 0"/>
-  <parent link="teta4_1"/>
-  <child link="tibia4_1"/>
-  <axis xyz="-0.770513 -0.637424 -0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 11" type="revolute">
-  <origin xyz="-0.0465 0.0165 -0.0515" rpy="0 0 0"/>
-  <parent link="coxa5_1"/>
-  <child link="teta5_1"/>
-  <axis xyz="-0.0 1.0 -0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 12" type="revolute">
-  <origin xyz="-0.06 0.0 0.0" rpy="0 0 0"/>
-  <parent link="teta5_1"/>
-  <child link="tibia5_1"/>
-  <axis xyz="0.0 -1.0 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 13" type="revolute">
-  <origin xyz="-0.040534 -0.028134 -0.0515" rpy="0 0 0"/>
-  <parent link="coxa6_1"/>
-  <child link="teta6_1"/>
-  <axis xyz="-0.812084 0.583541 0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 14" type="revolute">
-  <origin xyz="-0.035013 -0.048725 0.0" rpy="0 0 0"/>
-  <parent link="teta6_1"/>
-  <child link="tibia6_1"/>
-  <axis xyz="0.812084 -0.583541 -0.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
-</joint>
-
-<joint name="Revolute 15" type="revolute">
+<joint name="Revolute 3" type="revolute">
   <origin xyz="-0.1571 -0.05727 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="coxa1_1"/>
   <axis xyz="0.0 0.0 1.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <limit upper="1.570796" lower="-0.785398" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 16" type="revolute">
+<joint name="Revolute 4" type="revolute">
+  <origin xyz="0.045692 0.01862 -0.0515" rpy="0 0 0"/>
+  <parent link="coxa2_1"/>
+  <child link="teta2_1"/>
+  <axis xyz="-0.045973 0.998943 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 5" type="revolute">
+  <origin xyz="0.061441 -0.030207 0.001261" rpy="0 0 0"/>
+  <parent link="teta2_1"/>
+  <child link="tibia2_1"/>
+  <axis xyz="0.045973 -0.998943 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 6" type="revolute">
   <origin xyz="-0.152351 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="coxa2_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 17" type="revolute">
+<joint name="Revolute 7" type="revolute">
+  <origin xyz="0.017973 0.045951 -0.0515" rpy="0 0 0"/>
+  <parent link="coxa3_1"/>
+  <child link="teta3_1"/>
+  <axis xyz="-0.755853 0.654741 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 8" type="revolute">
+  <origin xyz="0.064228 0.023745 0.0" rpy="0 0 0"/>
+  <parent link="teta3_1"/>
+  <child link="tibia3_1"/>
+  <axis xyz="0.755853 -0.654741 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 9" type="revolute">
   <origin xyz="-0.1571 0.05727 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="coxa3_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <limit upper="1.570796" lower="-0.596903" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 18" type="revolute">
+<joint name="Revolute 10" type="revolute">
+  <origin xyz="-0.042917 0.024344 -0.0515" rpy="0 0 0"/>
+  <parent link="coxa4_1"/>
+  <child link="teta4_1"/>
+  <axis xyz="-0.755853 -0.654741 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 11" type="revolute">
+  <origin xyz="-0.014341 0.066958 0.0" rpy="0 0 0"/>
+  <parent link="teta4_1"/>
+  <child link="tibia4_1"/>
+  <axis xyz="-0.755853 -0.654741 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 12" type="revolute">
   <origin xyz="-0.237601 0.05727 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="coxa4_1"/>
-  <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <axis xyz="0.0 0.0 1.0"/>
+  <limit upper="1.570796" lower="-1.103286" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 19" type="revolute">
+<joint name="Revolute 13" type="revolute">
+  <origin xyz="-0.046442 -0.016662 -0.0515" rpy="0 0 0"/>
+  <parent link="coxa5_1"/>
+  <child link="teta5_1"/>
+  <axis xyz="0.003491 -0.999994 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 14" type="revolute">
+  <origin xyz="-0.060115 0.03279 0.0" rpy="0 0 0"/>
+  <parent link="teta5_1"/>
+  <child link="tibia6_1"/>
+  <axis xyz="0.003491 -0.999994 0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 15" type="revolute">
   <origin xyz="-0.242351 0.0 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="coxa5_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
-  <limit upper="6.283185" lower="0.0" effort="100" velocity="100"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
 </joint>
 
-<joint name="Revolute 20" type="continuous">
+<joint name="Revolute 16" type="revolute">
+  <origin xyz="-0.017974 -0.045951 -0.0515" rpy="0 0 0"/>
+  <parent link="coxa6_1"/>
+  <child link="teta6_1"/>
+  <axis xyz="0.755853 -0.654741 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 17" type="revolute">
+  <origin xyz="-0.064228 -0.023745 0.0" rpy="0 0 0"/>
+  <parent link="teta6_1"/>
+  <child link="tibia5_1"/>
+  <axis xyz="0.755853 -0.654741 -0.0"/>
+  <limit upper="1.570796" lower="-1.570796" effort="100" velocity="100"/>
+</joint>
+
+<joint name="Revolute 18" type="revolute">
   <origin xyz="-0.237601 -0.05727 0.0" rpy="0 0 0"/>
   <parent link="base_link"/>
   <child link="coxa6_1"/>
   <axis xyz="0.0 0.0 -1.0"/>
+  <limit upper="1.570796" lower="-0.704255" effort="100" velocity="100"/>
 </joint>
 
 </robot>
